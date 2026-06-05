@@ -1,0 +1,416 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+
+<Base title="QINGDAO ARTIFICIAL CASING | One-Stop Sausage Casing Solutions">
+  
+  <!-- ==========================================
+       1. TOP WELCOME BAR (最上面的极细灰色小条 - 像素级对标说明书)
+       ========================================== -->
+  <div class="w-full bg-[#334155] text-slate-300 py-1.5 text-xs border-b border-slate-700/50">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-2">
+      <div>Welcome to our company</div>
+      <div class="flex items-center gap-6 text-[11px]">
+        <a href="mailto:sales@artificialcasing.cn" class="hover:text-orange-400 flex items-center gap-1 transition">
+          <span>✉️</span> sales@artificialcasing.cn
+        </a>
+        <span class="flex items-center gap-1">
+          <span>📞</span> +86-532-85663688
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       2. NAVIGATION HEADER (只保留这一个标准大导航：左Logo，右二级目录)
+       ========================================== -->
+  <header class="w-full bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm border-b border-slate-100">
+    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- 左边 Logo 图片与文字核心组合 -->
+      <a href="/" class="h-12 flex items-center">
+        <img src="/images/logo.png" alt="QINGDAO ARTIFICIAL CASING" class="h-full w-auto object-contain" />
+      </a>
+
+      <!-- 右边二级目录菜单 (完全对标 Bigspring 的现代鲜亮高质感排版) -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/" class="text-sm font-semibold text-blue-600 border-b-2 border-blue-600 pb-1">Home</a>
+        <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">About Us</a>
+        
+        <!-- 下拉二级菜单 -->
+        <div class="relative group">
+          <button class="text-sm font-medium text-slate-600 group-hover:text-blue-600 flex items-center gap-1 transition py-2">
+            Products <span class="text-[10px]">▼</span>
+          </button>
+          <div class="absolute top-full left-0 w-56 bg-white border border-slate-100 rounded-lg shadow-lg opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 p-2 space-y-1">
+            <a href="#products" class="block px-4 py-2 text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded">Cellulose Casings</a>
+            <a href="#products" class="block px-4 py-2 text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded">Collagen Casings</a>
+            <a href="#products" class="block px-4 py-2 text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded">Plastic Casings</a>
+            <a href="#products" class="block px-4 py-2 text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded">Fibrous Casings</a>
+          </div>
+        </div>
+
+        <a href="#advantage" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Our Advantage</a>
+        <a href="#applications" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Applications</a>
+        <a href="#contact" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-full transition shadow-md tracking-wider">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       3. HERO SWIPER (3张大图轮播，每张1秒，弹出两行单词)
+       ========================================== -->
+  <section class="relative w-full h-[520px] bg-slate-50 overflow-hidden">
+    <div class="swiper hero-swiper h-full w-full">
+      <div class="swiper-wrapper">
+        
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative h-full w-full">
+          <img src="/images/hero/slide1.jpg" alt="World Quality" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-black/10"></div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="container mx-auto px-8 md:px-16 text-white">
+              <h1 class="slide-element animate-slide-up font-primary font-black text-4xl md:text-6xl drop-shadow-md tracking-wide">
+                World Quality
+              </h1>
+              <p class="slide-element animate-slide-up-delay text-xl md:text-2xl font-medium mt-4 text-orange-400 drop-shadow">
+                Professional Manufacturer & Global Supplier
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative h-full w-full">
+          <img src="/images/hero/slide2.jpg" alt="Professional Manage" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-black/10"></div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="container mx-auto px-8 md:px-16 text-white">
+              <h2 class="slide-element animate-slide-up font-primary font-black text-4xl md:text-6xl drop-shadow-md tracking-wide">
+                Professional Manage
+              </h2>
+              <p class="slide-element animate-slide-up-delay text-xl md:text-2xl font-medium mt-4 text-orange-400 drop-shadow">
+                Strict Quality Inspection Standards
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide relative h-full w-full">
+          <img src="/images/hero/slide3.jpg" alt="Automated Production" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-black/10"></div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="container mx-auto px-8 md:px-16 text-white">
+              <h2 class="slide-element animate-slide-up font-primary font-black text-4xl md:text-6xl drop-shadow-md tracking-wide">
+                Advanced Extrusion
+              </h2>
+              <p class="slide-element animate-slide-up-delay text-xl md:text-2xl font-medium mt-4 text-orange-400 drop-shadow">
+                Tailored For High-Speed Stuffing Lines
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination !bottom-6"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. COMPANY PROFILE (公司介绍区)
+       ========================================== -->
+  <section class="py-24 bg-white" id="about">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide uppercase">Company Profile</h2>
+        <div class="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-100 p-8 md:p-12 rounded-2xl shadow-xl shadow-blue-900/5 text-center relative overflow-hidden">
+        <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500/5 rounded-full blur-2xl"></div>
+        
+        <h3 class="text-lg font-bold text-slate-500 mb-1 tracking-wider">青岛爱福肠衣有限公司</h3>
+        <h4 class="text-2xl md:text-3xl font-black text-blue-600 tracking-wide mb-6">Qingdao Artificial Casing Co., Ltd</h4>
+        
+        <p class="text-slate-600 text-sm md:text-base leading-loose max-w-4xl mx-auto text-justify md:text-center">
+          Qingdao Artificial Casing Co., Ltd. is located in Qingdao, which has the most important seaport of China-Qingdao port. We've two factories in Shandong province and an exporting company in Qingdao city. We are the professional supplier of artificial casings for years. Our main products include collagen casings and cellulose casings. After several years' research and development, our products had served many customers from all over the world and won good reputation.
+        </p>
+
+        <div class="mt-8 flex justify-center gap-4">
+          <a href="#contact" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-lg transition shadow-md tracking-wider">GET A QUOTE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. PRODUCTS INTRO (产品介绍：左右交错排版)
+       ========================================== -->
+  <section class="py-20 bg-slate-50/60 border-t border-b border-slate-100" id="products">
+    <div class="container mx-auto px-6 max-w-5xl">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide uppercase">Products Series</h2>
+        <div class="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="space-y-16">
+        
+        <!-- 产品组 1 (左字右图) -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition duration-300 grid md:grid-cols-2">
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4 relative pb-2 after:absolute after:bottom-0 after:left-0 after:w-12 after:h-[3px] after:bg-blue-600">
+              Cellulose Casing
+            </h3>
+            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">
+              Our high-grade cellulose casings are dynamic, plant-derived packaging systems engineered specifically for automated skinless sausage processing. Delivering precision caliber stability and reliable peelability.
+            </p>
+          </div>
+          <div class="h-64 md:h-auto min-h-[260px]">
+            <img src="/images/products/cellulose.jpg" alt="Cellulose Casing" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- 产品组 2 (左图右字) -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition duration-300 grid md:grid-cols-2">
+          <div class="h-64 md:h-auto min-h-[260px] md:order-first">
+            <img src="/images/products/polyamide.jpg" alt="Polyamide Casing" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4 relative pb-2 after:absolute after:bottom-0 after:left-0 after:w-12 after:h-[3px] after:bg-blue-600">
+              Polyamide Casing
+            </h3>
+            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">
+              Manufactured using advanced multi-layer nylon co-extrusion technology. Features supreme oxygen and moisture barrier properties, minimizing weight loss and maximizing product shelf-life.
+            </p>
+          </div>
+        </div>
+
+        <!-- 产品组 3 (左字右图) -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition duration-300 grid md:grid-cols-2">
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4 relative pb-2 after:absolute after:bottom-0 after:left-0 after:w-12 after:h-[3px] after:bg-blue-600">
+              Collagen Casing
+            </h3>
+            <p class="text-xs md:text-sm text-slate-500 leading-relaxed">
+              Made from high-quality bovine collagen fibers. Designed as the perfect alternative to natural casings, providing uniform caliber control, a tender bite, and excellent smoke/moisture permeability.
+            </p>
+          </div>
+          <div class="h-64 md:h-auto min-h-[260px]">
+            <img src="/images/products/collagen.jpg" alt="Collagen Casing" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. ADVANTAGE SECTION (优势介绍区)
+       ========================================== -->
+  <section class="py-24 bg-white" id="advantage">
+    <div class="container mx-auto px-4 max-w-6xl">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide uppercase">Our Advantage</h2>
+        <div class="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 border border-slate-100 rounded-xl overflow-hidden shadow-sm">
+        
+        <!-- 优势 1 -->
+        <div class="advantage-card group relative h-80 overflow-hidden cursor-pointer border-r border-b border-slate-100 last:border-0">
+          <img src="/images/adv/adv1.jpg" alt="Rich Experience" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-slate-900/70 group-hover:bg-orange-500/95 transition-all duration-500 flex flex-col justify-center items-center p-6 text-center text-white">
+            <span class="text-2xl mb-3 group-hover:scale-110 transition-transform">💡</span>
+            <h3 class="text-sm font-bold tracking-wider uppercase">Rich Experience</h3>
+            <div class="w-4 h-[2px] bg-white my-3"></div>
+            <p class="text-xs text-slate-100 opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-20 overflow-hidden leading-relaxed">
+              Decades of specialized manufacturing and export expertise.
+            </p>
+          </div>
+        </div>
+
+        <!-- 优势 2 -->
+        <div class="advantage-card group relative h-80 overflow-hidden cursor-pointer border-r border-b border-slate-100">
+          <img src="/images/adv/adv2.jpg" alt="Tech Support" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-slate-900/70 group-hover:bg-orange-500/95 transition-all duration-500 flex flex-col justify-center items-center p-6 text-center text-white">
+            <span class="text-2xl mb-3 group-hover:scale-110 transition-transform">⚙️</span>
+            <h3 class="text-sm font-bold tracking-wider uppercase">Tech Support</h3>
+            <div class="w-4 h-[2px] bg-white my-3"></div>
+            <p class="text-xs text-slate-100 opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-20 overflow-hidden leading-relaxed">
+              On-site technical solutions for high-speed automatic lines.
+            </p>
+          </div>
+        </div>
+
+        <!-- 优势 3 -->
+        <div class="advantage-card group relative h-80 overflow-hidden cursor-pointer border-r border-b border-slate-100">
+          <img src="/images/adv/adv3.jpg" alt="Professional Team" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-slate-900/70 group-hover:bg-orange-500/95 transition-all duration-500 flex flex-col justify-center items-center p-6 text-center text-white">
+            <span class="text-2xl mb-3 group-hover:scale-110 transition-transform">👥</span>
+            <h3 class="text-sm font-bold tracking-wider uppercase">Pro Team</h3>
+            <div class="w-4 h-[2px] bg-white my-3"></div>
+            <p class="text-xs text-slate-100 opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-20 overflow-hidden leading-relaxed">
+              Energetic, honest and fast-reacting elite service specialists.
+            </p>
+          </div>
+        </div>
+
+        <!-- 优势 4 -->
+        <div class="advantage-card group relative h-80 overflow-hidden cursor-pointer border-r border-b border-slate-100">
+          <img src="/images/adv/adv4.jpg" alt="Full Service" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-slate-900/70 group-hover:bg-orange-500/95 transition-all duration-500 flex flex-col justify-center items-center p-6 text-center text-white">
+            <span class="text-2xl mb-3 group-hover:scale-110 transition-transform">💎</span>
+            <h3 class="text-sm font-bold tracking-wider uppercase">Full Service</h3>
+            <div class="w-4 h-[2px] bg-white my-3"></div>
+            <p class="text-xs text-slate-100 opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-20 overflow-hidden leading-relaxed">
+              Seamless tracking from sizing formulation to prompt shipping.
+            </p>
+          </div>
+        </div>
+
+        <!-- 优势 5 -->
+        <div class="advantage-card group relative h-80 overflow-hidden cursor-pointer">
+          <img src="/images/adv/adv5.jpg" alt="Quality Control" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-slate-900/70 group-hover:bg-orange-500/95 transition-all duration-500 flex flex-col justify-center items-center p-6 text-center text-white">
+            <span class="text-2xl mb-3 group-hover:scale-110 transition-transform">🛡️</span>
+            <h3 class="text-sm font-bold tracking-wider uppercase">QC Control</h3>
+            <div class="w-4 h-[2px] bg-white my-3"></div>
+            <p class="text-xs text-slate-100 opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-20 overflow-hidden leading-relaxed">
+              Stringent ISO & HACCP laboratory verification for each batch.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. PRODUCTS APPLICATIONS (向左无缝无限循环跑马灯)
+       ========================================== -->
+  <section class="py-16 bg-slate-50 overflow-hidden" id="applications">
+    <div class="container mx-auto px-4 mb-10">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-slate-800 tracking-wide uppercase">Products Applications</h2>
+        <div class="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+    </div>
+
+    <div class="marquee-wrapper relative w-full flex overflow-x-hidden border-t border-b border-slate-200/50 bg-white py-4">
+      <div class="marquee-content flex gap-4 animate-marquee whitespace-nowrap">
+        <img src="/images/app/app1.jpg" alt="Application 1" class="h-40 w-64 object-cover rounded-xl shadow-sm border border-slate-100" />
+        <img src="/images/app/app2.jpg" alt="Application 2" class="h-40 w-64 object-cover rounded-xl shadow-sm border border-slate-100" />
+        <img src="/images/app/app3.jpg" alt="Application 3" class="h-40 w-64 object-cover rounded-xl shadow-sm border border-slate-100" />
+        <img src="/images/app/app4.jpg" alt="Application 4" class="h-40 w-64 object-cover rounded-xl shadow-sm border border-slate-100" />
+        
+        <!-- 用于无缝衔接拼合的复制组 -->
+        <img src="/images/app/app1.jpg" alt="Application 1 Duplicated" class="h-40 w-64 object-cover rounded-xl shadow-sm border border-slate-100" />
+        <img src="/images/app/app2.jpg" alt="Application 2 Duplicated" class="h-40 w-64 object-cover rounded-xl shadow-sm border border-slate-100" />
+        <img src="/images/app/app3.jpg" alt="Application 3 Duplicated" class="h-40 w-64 object-cover rounded-xl shadow-sm border border-slate-100" />
+        <img src="/images/app/app4.jpg" alt="Application 4 Duplicated" class="h-40 w-64 object-cover rounded-xl shadow-sm border border-slate-100" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. CONTACT FORM (外贸询盘区)
+       ========================================== -->
+  <section class="py-20 bg-white" id="contact">
+    <div class="container max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-800 tracking-wide uppercase">Inquiry Box</h2>
+        <p class="text-sm text-slate-500 mt-2">Let our technical specialists know your operational criteria and required calibers.</p>
+      </div>
+
+      <form class="space-y-6 border border-slate-200/80 p-8 md:p-10 rounded-2xl shadow-xl shadow-blue-900/5 bg-slate-50/50">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Your Name</label>
+            <input type="text" class="w-full border border-slate-300 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition" placeholder="Full Name" required />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Business Email</label>
+            <input type="email" class="w-full border border-slate-300 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition" placeholder="name@company.com" required />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Detailed Requirements</label>
+          <textarea rows="4" class="w-full border border-slate-300 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition" placeholder="Please type sausage types, caliber parameters and annual demands..." required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition duration-300 text-xs tracking-widest uppercase shadow-md">
+          Send Sample Inquiry
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. SITE FOOTER (只保留这一个经典的高级深色底部)
+       ========================================== -->
+  <footer class="bg-slate-900 text-slate-400 pt-16 pb-8 border-t-4 border-orange-500">
+    <div class="container mx-auto px-6 max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      <!-- QUICK NAVIGATION -->
+      <div class="flex flex-col gap-2.5">
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2">Quick Navigation</h4>
+        <a href="#products" class="w-full py-2.5 px-4 bg-slate-800 hover:bg-orange-500 hover:text-white transition rounded font-semibold text-xs tracking-wider text-left border-l-4 border-blue-600">Cellulose Casing</a>
+        <a href="#products" class="w-full py-2.5 px-4 bg-slate-800 hover:bg-orange-500 hover:text-white transition rounded font-semibold text-xs tracking-wider text-left border-l-4 border-blue-600">Collagen Casing</a>
+        <a href="#products" class="w-full py-2.5 px-4 bg-slate-800 hover:bg-orange-500 hover:text-white transition rounded font-semibold text-xs tracking-wider text-left border-l-4 border-blue-600">Plastic Casing</a>
+      </div>
+
+      <!-- CONTACT CHANNELS -->
+      <div class="space-y-4">
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider border-b border-slate-800 pb-2">Contact Channels</h4>
+        <ul class="space-y-3 text-xs">
+          <li class="flex items-center gap-2">
+            <span class="text-orange-500 text-base">📞</span>
+            <span><strong>Tel:</strong> +86-532-85663688</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-orange-500 text-base">✉️</span>
+            <span><strong>Email:</strong> sales@artificialcasing.cn</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-orange-500 text-base mt-0.5">📍</span>
+            <span><strong>Add:</strong> Rm 1014, Building 3, No.1 Xiangling Road, Qingdao, China</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 二维码与版权 -->
+      <div class="flex flex-col items-center md:items-end justify-between">
+        <div class="bg-white p-2.5 rounded-xl shadow-md w-32 h-32">
+          <img src="/images/qr-code.png" alt="Scan Mobile Terminal" class="w-full h-full object-contain" />
+        </div>
+        <p class="text-[11px] text-slate-500 mt-6 md:mt-0 text-center md:text-right">
+          © {new Date().getFullYear()} Qingdao Artificial Casing Co., Ltd. All Rights Reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Swiper 脚本驱动 -->
+  <script>
+    import Swiper from "swiper";
+    import "swiper/css";
+    import "swiper/css/pagination";
+    import { Autoplay, Pagination } from "swiper/modules";
+
+    document.addEventListener("astro:page-load", () => {
+      if (document.querySelector(".hero-swiper")) {
+        new Swiper(".hero-swiper", {
+          modules: [Pagination, Autoplay],
+          autoplay: { 
+            delay: 1000, 
+            disableOnInteraction: false 
+          },
+          pagination: { el: ".swiper-pagination", clickable: true },
+          loop: true,
+        });
+      }
+    });
+  </script>
+</Base>

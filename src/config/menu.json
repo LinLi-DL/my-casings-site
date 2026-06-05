@@ -5,64 +5,52 @@
       "url": "/"
     },
     {
-      "name": "Blog",
+      "name": "About Us",
+      "url": "/about"
+    },
+    {
+      "name": "Products",
+      "url": "/products"
+    },
+    {
+      "name": "Knowledge",
       "url": "/blog"
     },
     {
-      "name": "Pricing",
-      "url": "/pricing"
-    },
-    {
-      "name": "Contact",
+      "name": "Contact Us",
       "url": "/contact"
-    },
-    {
-      "name": "FAQ",
-      "url": "/faq"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
     }
   ],
   "footer": [
     {
-      "name": "Company",
+      "name": "Products",
       "menu": [
         {
-          "text": "Pricing",
-          "url": "/pricing"
+          "text": "Collagen Casings",
+          "url": "/products"
         },
         {
-          "text": "Quick Start",
-          "url": "#"
+          "text": "Plastic Casings",
+          "url": "/products"
         }
       ]
     },
     {
-      "name": "Product",
+      "name": "Factory Strength",
       "menu": [
         {
-          "text": "Features",
-          "url": "#"
+          "text": "Hebei Production Base",
+          "url": "/about"
         },
         {
-          "text": "Platform",
-          "url": "#"
-        },
-        {
-          "text": "Pricing",
-          "url": "/pricing"
+          "text": "Inner Mongolia Base",
+          "url": "/about"
         }
       ]
     },
     {
       "name": "Support",
       "menu": [
-        {
-          "text": "FAQ",
-          "url": "/faq"
-        },
         {
           "text": "Privacy Policy",
           "url": "/privacy-policy"

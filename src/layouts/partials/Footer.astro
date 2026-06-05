@@ -1,54 +1,58 @@
 ---
-import { Image } from "astro:assets";
-import Social from "@/components/Social.astro";
-import config from "@/config/config.json";
-import menu from "@/config/menu.json";
-import social from "@/config/social.json";
-import { markdownify } from "@/lib/utils/textConverter";
-
-const { footer_content, copyright } = config.params;
+const currentYear = new Date().getFullYear();
 ---
+<footer class="bg-[#2d3135] text-slate-300 pt-16 pb-6 border-t-2 border-orange-500">
+  <div class="container mx-auto px-6 max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-8">
+    
+    <!-- 1. 左侧：圆角橙边肠衣分类按钮 -->
+    <div class="flex flex-col gap-3">
+      <a href="#products" class="w-full py-2 px-5 bg-transparent hover:bg-orange-500 text-slate-300 hover:text-white transition rounded-full border border-slate-500 text-xs text-center">Collagen Casing</a>
+      <a href="#products" class="w-full py-2 px-5 bg-transparent hover:bg-orange-500 text-slate-300 hover:text-white transition rounded-full border border-slate-500 text-xs text-center">Plastic Casing</a>
+    </div>
 
-<footer class="section bg-theme-light pb-0">
-  <div class="container">
-    {/* footer menu */}
-    <div class="row">
-      {
-        menu.footer.map((col) => {
-          return (
-            <div class="mb-12 sm:col-6 lg:col-3">
-              <h2 class="h4" set:html={markdownify(col.name)} />
-              <ul class="mt-6">
-                {col?.menu.map((item) => (
-                  <li class="mb-1">
-                    <a href={item.url} rel="">
-                      {item.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })
-      }
-      {/* social icons */}
-      <div class="md-12 sm:col-6 lg:col-3">
-        <a href="/" aria-label="Bigspring">
-          <Image
-            src={config.site.logo}
-            width={Number(config.site.logo_width)}
-            height={Number(config.site.logo_height)}
-            alt=""
-          />
-        </a>
+    <!-- 2. 中间：黄色圆圈图标联系渠道 -->
+    <div class="space-y-4 md:col-span-1">
+      <ul class="space-y-4 text-xs">
+        <li class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-orange-500 flex items-center justify-center text-slate-900 font-bold">📞</div>
+          <span><strong>Tel:</strong> +86 - 150 9206 6506</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-orange-500 flex items-center justify-center text-slate-900 font-bold">✉️</div>
+          <span><strong>E-mail:</strong> sales@haitucasing.cn</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <div class="w-7 h-7 rounded-full bg-orange-500 flex items-center justify-center text-slate-900 font-bold flex-shrink-0">📍</div>
+          <span class="leading-relaxed"><strong>Add:</strong> No. 7 Building, No. 20, Yuying Road, Chengyang District, Qingdao City, China</span>
+        </li>
+      </ul>
+    </div>
 
-        <p class="mt-3 mb-6" set:html={markdownify(footer_content)} />
-        <Social source={social} className="social-icons mb-8" />
+    <!-- 3. 右侧：二维码中心 -->
+    <div class="flex flex-col items-center justify-center">
+      <div class="bg-white p-2 rounded shadow-lg w-28 h-28">
+        <img src="/images/qr-code.png" alt="Mobile Terminal" class="w-full h-full object-contain" />
       </div>
+      <span class="text-[10px] text-slate-500 mt-2 tracking-wider">Mobile Terminal</span>
     </div>
-    {/* copyright */}
-    <div class="border-t border-border py-6">
-      <p class="text-sm text-center" set:html={markdownify(copyright)} />
+
+    <!-- 4. 最右侧：带小图标的竖排浅灰色导航底座 -->
+    <div class="bg-[#3a3f44] rounded-lg p-4 flex flex-col gap-1 text-xs">
+      <a href="/" class="flex items-center justify-between py-2 px-3 hover:bg-[#474d53] rounded transition text-slate-300">
+        <span class="flex items-center gap-2">🏠 Home</span> <span class="text-slate-500 text-[10px]">▶</span>
+      </a>
+      <a href="#about" class="flex items-center justify-between py-2 px-3 hover:bg-[#474d53] rounded transition text-slate-300">
+        <span class="flex items-center gap-2">👤 About Us</span> <span class="text-slate-500 text-[10px]">▶</span>
+      </a>
+      <a href="#products" class="flex items-center justify-between py-2 px-3 hover:bg-[#474d53] rounded transition text-slate-300">
+        <span class="flex items-center gap-2">📖 Knowledge</span> <span class="text-slate-500 text-[10px]">▶</span>
+      </a>
     </div>
+
+  </div>
+
+  <!-- 底部版权条 -->
+  <div class="border-t border-slate-800 mt-12 pt-6 text-center text-[11px] text-slate-500 tracking-wider">
+    Copyright © Haitu element Technology Co., Ltd. All Rights Reserved.
   </div>
 </footer>

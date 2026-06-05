@@ -1,126 +1,45 @@
 ---
-import Logo from "@/components/Logo.astro";
-import { nav_button } from "@/config/config.json";
-import menu from "@/config/menu.json";
-
-const pathname = new URL(Astro.request.url).pathname;
-
-export interface ChildNavigationLink {
-  name: string;
-  url: string;
-}
-
-export interface NavigationLink {
-  name: string;
-  url: string;
-  hasChildren?: boolean;
-  children?: ChildNavigationLink[];
-}
-
-const { main }: { main: NavigationLink[] } = menu;
+// 如果有模版自带的配置，可以保留在上方
 ---
+<header class="w-full bg-white border-b border-slate-100 sticky top-0 z-50">
+  <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+    
+    <!-- 左边：Logo图片与文字组合 (完全对应截图) -->
+    <a href="/" class="flex items-center gap-3">
+      <img src="/images/logo_haitu.png" alt="IFINE CASING" class="h-14 w-auto object-contain" />
+      <div class="border-l border-slate-300 pl-3">
+        <div class="text-lg font-black tracking-wider text-slate-900 uppercase">HAITU CASING</div>
+        <div class="text-[10px] text-slate-400 italic font-medium -mt-1">One-stop supply of sausage casing from China</div>
+      </div>
+    </a>
 
-<header class="header">
-  <nav class="navbar container">
-    <!-- logo -->
-    <div class="order-0">
-      <Logo />
-    </div>
-    <!-- navbar toggler -->
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      id="show-button"
-      for="nav-toggle"
-      class="order-2 flex cursor-pointer items-center md:order-1 md:hidden"
-    >
-      <svg class="h-6 fill-current" viewBox="0 0 20 20">
-        <title>Menu Open</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-      </svg>
-    </label>
-    <label
-      id="hide-button"
-      for="nav-toggle"
-      class="order-2 cursor-pointer items-center md:order-1"
-    >
-      <svg class="h-6 fill-current" viewBox="0 0 20 20">
-        <title>Menu Close</title>
-        <polygon
-          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-          transform="rotate(45 10 10)"></polygon>
-      </svg>
-    </label>
-    <!-- /navbar toggler -->
-
-    <ul
-      id="nav-menu"
-      class="navbar-nav order-3 hidden w-full md:order-1 md:flex md:w-auto md:space-x-3"
-    >
-      {
-        main.map((menu) => (
-          <>
-            {menu.hasChildren ? (
-              <li class="nav-item nav-dropdown group relative">
-                <span class="nav-link inline-flex items-center">
-                  {menu.name}
-                  <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
-                </span>
-                <ul class="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
-                  {menu.children?.map((child) => (
-                    <li class="nav-dropdown-item">
-                      <a
-                        href={child.url}
-                        class={`nav-dropdown-link block ${
-                          pathname === child.url && "nav-link-active"
-                        }`}
-                      >
-                        {child.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ) : (
-              <li class="nav-item">
-                <a
-                  href={menu.url}
-                  class={`nav-link block ${
-                    pathname === menu.url && "nav-link-active"
-                  }`}
-                >
-                  {menu.name}
-                </a>
-              </li>
-            )}
-          </>
-        ))
-      }
-      {
-        nav_button.enable && (
-          <div class="block md:hidden">
-            <a
-              class="btn btn-primary z-0 ml-auto py-[14px]"
-              href={nav_button.link}
-            >
-              {nav_button.label}
-            </a>
-          </div>
-        )
-      }
-    </ul>
-    {
-      nav_button.enable && (
-        <div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 md:flex md:min-w-[150px] lg:min-w-[200px]">
-          <a
-            class="btn btn-primary z-0 ml-auto py-[14px]"
-            href={nav_button.link}
-          >
-            {nav_button.label}
-          </a>
+    <!-- 右边：二级目录菜单 (带竖线分隔) -->
+    <nav class="hidden md:flex items-center text-sm font-medium text-slate-600">
+      <a href="/" class="hover:text-orange-500 transition px-3">Home</a>
+      <span class="text-slate-300 text-xs">|</span>
+      
+      <a href="#about" class="hover:text-orange-500 transition px-3">About Us</a>
+      <span class="text-slate-300 text-xs">|</span>
+      
+      <!-- Products 下拉菜单 -->
+      <div class="relative group px-3">
+        <button class="hover:text-orange-500 flex items-center gap-1 transition py-2">
+          Products <span class="text-[9px]">▼</span>
+        </button>
+        <div class="absolute top-full left-0 w-48 bg-white border border-slate-100 rounded-md shadow-lg opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all p-1 space-y-0.5">
+          <a href="#products" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded">Cellulose Casing</a>
+          <a href="#products" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded">Collagen Casing</a>
+          <a href="#products" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded">Plastic Casing</a>
+          <a href="#products" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded">Fibrous Casing</a>
         </div>
-      )
-    }
-  </nav>
+      </div>
+      <span class="text-slate-300 text-xs">|</span>
+      
+      <a href="#knowledge" class="hover:text-orange-500 transition px-3">Knowledge</a>
+      <span class="text-slate-300 text-xs">|</span>
+      
+      <a href="#contact" class="hover:text-orange-500 transition px-3">Contact</a>
+    </nav>
+
+  </div>
 </header>
