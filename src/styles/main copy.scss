@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import "base";
+}
+
+@layer components {
+  @import "components";
+  @import "navigation";
+  @import "buttons";
+  @import '../../node_modules/swiper/swiper.scss';
+}
+
+@layer utilities {
+  @import "utilities";
+}
+
+
+
+/* ==========================================
+   优势卡片过渡动画 
+   ========================================== */
+.advantage-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ==========================================
+   产品应用：向左无缝循环长廊跑马灯特效
+   ========================================== */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+/* 鼠标放上去时暂停跑马灯滚动 */
+.marquee-wrapper:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* ==========================================
+   Hero 大字动效（跟随轮播瞬间激活动画）
+   ========================================== */
+@keyframes slideUpEffect {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-swiper .slide-element {
+  opacity: 0;
+}
+
+.hero-swiper .swiper-slide-active .animate-slide-up {
+  animation: slideUpEffect 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-swiper .swiper-slide-active .animate-slide-up-delay {
+  animation: slideUpEffect 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+/* 小圆点激活态渲染为精美跑道条 */
+.swiper-pagination-bullet-active {
+  background: #ea580c !important; /* 明亮元气鲜橙色 */
+  width: 18px !important;
+  border-radius: 4px !important;
+}
+
+
+
+
+
+// /* 针对 Advantage 5格网格的过渡增强 */
+// .advantage-card {
+//   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// /* 头图大字动画特效 */
+// @keyframes slideUp {
+//   from {
+//     opacity: 0;
+//     transform: translateY(24px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// .animate-slide-up {
+//   animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+// }
+
+// .animate-slide-up-delay {
+//   opacity: 0;
+//   animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+// }
+
+
+
+
+
+// /* 复合 Hero 大容器 */
+// .hero-composite-wrapper {
+//   width: 100% !important;
+//   display: flex !important;
+//   flex-direction: column !important;
+//   overflow: hidden;
+// }
+
+// /* 1. 上半部分：裁剪到原有高度的 2/3 (设定为 420px，可根据需要微调) */
+// .hero-top-carousel {
+//   width: 100% !important;
+//   height: 420px !important; 
+//   position: relative !important;
+//   background-color: #1a0505;
+// }
+
+// /* 强制轮播图强制拉伸填充 */
+// .hero-top-carousel .swiper-slide img {
+//   width: 100% !important;
+//   height: 100% !important;
+//   object-fit: fill !important; 
+// }
+
+// /* 仅包含最大字体的绝对定位层 */
+// .hero-top-content-layer {
+//   position: absolute !important;
+//   inset: 0 !important;
+//   display: flex !important;
+//   align-items: center !important;
+//   z-index: 20 !important;
+//   pointer-events: none; /* 让上层文字不干扰下方的点击 */
+// }
+
+// /* 2. 下半部分：固定展示的独立空间面板 */
+// .hero-bottom-fixed-panel {
+//   width: 100% !important;
+//   background-color: #1a0505 !important; /* 延续截图 image_9a601b.jpg 的高质感深肉红底色 */
+//   padding-top: 2.5rem !important;
+//   padding-bottom: 3rem !important;
+//   border-top: 1px solid rgba(220, 38, 38, 0.2); /* 微弱的红色分界线线增加工业质感 */
+//   position: relative;
+//   z-index: 25;
+// }
+
+// /* 轮播小红点微调 */
+// .hero-pagination .swiper-pagination-bullet-active {
+//   background: #dc2626 !important;
+//   width: 20px !important;
+//   border-radius: 4px !important;
+// }
+
+// /* 1. 锁死轮播区域的高度为原版 2/3 (420px左右最佳) */
+// .hero-swiper-section {
+//   width: 100% !important;
+//   height: 420px !important; 
+//   position: relative !important;
+//   overflow: hidden !important;
+//   display: block !important;
+//   background-color: #1a0505;
+// }
+
+// .hero-swiper, 
+// .hero-swiper .swiper-wrapper, 
+// .hero-swiper .swiper-slide {
+//   width: 100% !important;
+//   height: 100% !important;
+//   position: relative !important;
+// }
+
+// /* 强制图片100%拉伸变形铺满 */
+// .hero-bg-img {
+//   position: absolute !important;
+//   top: 0 !important;
+//   left: 0 !important;
+//   width: 100% !important;
+//   height: 100% !important;
+//   object-fit: fill !important; 
+//   z-index: 0 !important;
+// }
+
+// /* 工业红温暖渐变遮罩 */
+// .hero-overlay {
+//   position: absolute !important;
+//   inset: 0 !important;
+//   background: linear-gradient(90deg, rgba(74, 14, 14, 0.95) 0%, rgba(45, 5, 5, 0.8) 50%, rgba(0, 0, 0, 0.2) 100%) !important;
+//   z-index: 10 !important;
+// }
+
+// /* 文字内容容器排版定位 */
+// .hero-content-container {
+//   position: absolute !important;
+//   inset: 0 !important;
+//   display: flex !important;
+//   align-items: center !important;
+//   z-index: 20 !important;
+//   padding-left: 3rem;
+//   padding-right: 3rem;
+// }
+
+// /* 2. 下半部分固定面板 */
+// .hero-bottom-fixed-panel {
+//   width: 100% !important;
+//   background-color: #1a0505 !important;
+//   padding-top: 2.5rem !important;
+//   padding-bottom: 3rem !important;
+//   border-top: 1px solid rgba(220, 38, 38, 0.15);
+// }
+
+// /* --- 轮播图片切换时，文字淡入淡出的底层动效 --- */
+// .hero-swiper .slide-element {
+//   opacity: 0;
+//   transform: translateY(15px);
+//   transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+// }
+
+// .hero-swiper .swiper-slide-active .animate-fade-in {
+//   opacity: 1;
+//   transform: translateY(0);
+//   transition-delay: 0.2s;
+// }
+
+// .hero-swiper .swiper-slide-active .animate-slide-up-1 {
+//   opacity: 1;
+//   transform: translateY(0);
+//   transition-delay: 0.5s;
+// }
+
+// /* 轮播指示点 */
+// .hero-pagination .swiper-pagination-bullet-active {
+//   background: #dc2626 !important;
+//   width: 20px !important;
+//   border-radius: 4px !important;
+// }

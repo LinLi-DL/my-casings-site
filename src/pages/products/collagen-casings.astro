@@ -1,0 +1,83 @@
+---
+// 1. 这里是 Astro 的 Frontmatter 区域（三个破折号包围）
+// 我们需要在这里引入你的基础布局组件（Layout），这样页面就会自带修改好的 Header 和 Footer
+import Base from "@/layouts/Base.astro";
+// 注：如果不确定是 Base 还是 Default，可以参考你的 pricing.astro 是怎么引用的
+---
+
+<Base title="Plastic Casing Category - HAITU CASING">
+  
+  <section class="relative w-full h-[320px] md:h-[400px] bg-slate-900 overflow-hidden">
+    <img src="/images/plastic-casing-banner.jpg" alt="Plastic Casing" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+    <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+      <div class="w-11/12 max-w-5xl bg-amber-500/80 backdrop-blur-sm py-6 px-4 md:py-8 text-center rounded shadow-lg">
+        <h1 class="text-2xl md:text-4xl font-bold text-white uppercase tracking-wider">
+          Plastic Casing Category
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-full bg-slate-50 border-b border-slate-100 py-6">
+    <div class="container mx-auto px-4 flex justify-center">
+      <a href="/collagen-casing" class="px-8 py-2.5 border border-slate-300 bg-white text-slate-600 rounded-full text-xs font-medium tracking-wide shadow-sm hover:border-orange-500 hover:text-orange-500 transition-all duration-300">
+        Collagen Casing Category &rarr;
+      </a>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="bg-white border border-slate-100 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="p-4 bg-slate-50 flex items-center justify-center aspect-[4/3]">
+          <img src="/images/products/high-barrier.jpg" alt="High Barrier Vacuum Bagging Film" class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="p-4 border-t border-slate-100 text-center">
+          <div class="w-3 h-3 bg-orange-500 rounded-full mx-auto mb-3"></div>
+          <h3 class="text-sm font-medium text-slate-700 leading-snug min-h-[40px] flex items-center justify-center">
+            High Barrier Vacuum Bagging Film
+          </h3>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-100 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="p-4 bg-slate-50 flex items-center justify-center aspect-[4/3]">
+          <img src="/images/products/standard-barrier.jpg" alt="Standard Barrier Vacuum Bagging Film" class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="p-4 border-t border-slate-100 text-center">
+          <div class="w-3 h-3 bg-orange-500 rounded-full mx-auto mb-3"></div>
+          <h3 class="text-sm font-medium text-slate-700 leading-snug min-h-[40px] flex items-center justify-center">
+            Standard Barrier Vacuum Bagging Film
+          </h3>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-100 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="p-4 bg-slate-50 flex items-center justify-center aspect-[4/3]">
+          <img src="/images/products/vacuum-pouches.jpg" alt="Vacuum Pouches(Bags)" class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="p-4 border-t border-slate-100 text-center">
+          <div class="w-3 h-3 bg-orange-500 rounded-full mx-auto mb-3"></div>
+          <h3 class="text-sm font-medium text-slate-700 leading-snug min-h-[40px] flex items-center justify-center">
+            Vacuum Pouches(Bags)
+          </h3>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-100 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div class="p-4 bg-slate-50 flex items-center justify-center aspect-[4/3]">
+          <img src="/images/products/big-caliber.jpg" alt="Big Caliber Plastic Shrunk Casing" class="max-h-full max-w-full object-contain" />
+        </div>
+        <div class="p-4 border-t border-slate-100 text-center">
+          <div class="w-3 h-3 bg-orange-500 rounded-full mx-auto mb-3"></div>
+          <h3 class="text-sm font-medium text-slate-700 leading-snug min-h-[40px] flex items-center justify-center">
+            Big Caliber Plastic Shrunk Casing
+          </h3>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</Base>

@@ -1,0 +1,340 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+
+<Base title="HAITU CASING | Premium Sausage Casing Solutions">
+
+  <!-- ==========================================
+       1. HERO 顶部的极细灰色小条 (F非常细的小条)
+       ========================================== -->
+  <div class="w-full bg-[#1e293b] text-slate-400 py-1 text-[11px] border-b border-slate-800/60">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div>Welcome to our company</div>
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1">✉️ sales@haitucasing.com</span>
+        <span class="flex items-center gap-1">📞 +86-15092056506</span>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- ==========================================
+       2. HERO SWIPER 轮播大图 (终极高清 1:1 纯净全屏版)
+       ========================================== -->
+  <!-- 💡 核心修改：PC端高度升级为 h-screen（100%撑满屏幕高度），移动端自适应 h-[80vh]
+       彻底解决 1920x1080 图片被强制压缩、裁切三分之一、以及拉伸模糊的问题！ -->
+  <section class="relative w-full h-[80vh] md:h-screen bg-slate-900 overflow-hidden">
+    <div class="swiper hero-swiper h-full w-full">
+      <div class="swiper-wrapper">
+        
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative h-full w-full">
+          <!-- 💡 图片名已精准对齐：transport.png，已替换为 object-fill -->
+          <img src="/images/hero/transport.png" alt="Global Delivery" class="absolute inset-0 w-full h-full object-fill" />
+          
+          <!-- 文字浮层：主题橘红色大字 + 强力立体阴影 -->
+          <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-black tracking-wide text-orange-500 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              Global Delivery
+            </h1>
+            <p class="text-2xl md:text-3xl font-bold mt-4 tracking-wide text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
+              Professional Manage
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative h-full w-full">
+          <!-- 💡 图片名已精准对齐：sales.png，已替换为 object-fill -->
+          <img src="/images/hero/sales.png" alt="One-Stop Supply" class="absolute inset-0 w-full h-full object-fill" />
+          
+          <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-black tracking-wide text-orange-500 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              One-Stop Supply
+            </h2>
+            <p class="text-2xl md:text-3xl font-bold mt-4 tracking-wide text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
+              Complete Category
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide relative h-full w-full">
+          <!-- 💡 图片名已精准对齐：sausage.png，已替换为 object-fill -->
+          <img src="/images/hero/sausage.png" alt="World Quality" class="absolute inset-0 w-full h-full object-fill" />
+          
+          <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-black tracking-wide text-orange-500 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              World Quality
+            </h2>
+            <p class="text-2xl md:text-3xl font-bold mt-4 tracking-wide text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
+              Professional Manufacturer
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide relative h-full w-full">
+          <!-- 💡 图片名已精准对齐：factory.png，已替换为 object-fill -->
+          <img src="/images/hero/factory.png" alt="Professional Manage" class="absolute inset-0 w-full h-full object-fill" />
+          
+          <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-black tracking-wide text-orange-500 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              Strict Inspection Standards
+            </h2>
+            <p class="text-2xl md:text-3xl font-bold mt-4 tracking-wide text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
+              Fast & Reliable Logistics
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- 轮播图圆点导航 -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+
+
+
+
+<!-- ==========================================
+       3. COMPANY PROFILE (公司介绍区)
+       ========================================== -->
+  <section class="pt-16 pb-16 bg-white" id="about">
+    <div class="container mx-auto px-4 text-center">
+      <!-- 标题在干净的大白底上 -->
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide uppercase">Company Profile</h2>
+      <!-- 💡 标题下方距离由 mb-12 缩减为 mb-6 -->
+      <div class="w-16 h-1 bg-orange-500 mx-auto mt-4 mb-6 rounded-full"></div>
+
+      <!-- 内容区：限制宽度 (max-w-5xl) 且自带独立底纹与圆角 -->
+      <div class="max-w-5xl mx-auto bg-slate-50 border border-slate-100 rounded-2xl shadow-sm overflow-hidden">
+        <!-- 上半部分：公司简介文字 -->
+        <div class="p-8 md:p-12 pb-6 text-center">
+          <h4 class="text-2xl md:text-3xl font-black text-slate-800 tracking-wide mb-6 uppercase">Hytoo Elements Tech Co., Ltd</h4>
+          
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed text-justify max-w-4xl mx-auto">
+            Based in the major port city of Qingdao, China, <strong class="text-slate-800">Hytoo Elements</strong> is a dedicated and professional supplier specializing in the artificial casing industry. To ensure streamlined supply and competitive pricing, we operate with a combined structure: production bases in Hebei Province focusing on manufacturing, and a highly responsive export office in Qingdao handling international trade and logistics.
+          </p>
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed text-justify max-w-4xl mx-auto mt-4">
+            Our core product lines include high-quality <strong class="text-orange-500 font-semibold">Collagen Casings</strong> and <strong class="text-orange-500 font-semibold">Plastic Casings</strong>. At Hytoo Elements, we believe that quality and service matter more than order size. We strictly inspect every batch of products and provide tailored support for each food processing client. To date, our casings have been successfully delivered to emerging food processors in <span class="font-medium text-slate-700">Russia, Central Asia, and the Americas</span>, earning trust through stability and excellent cost-effectiveness. We highly value every opportunity to grow together with our partners. Looking ahead, Hytoo Elements will remain committed to refining our products and providing flexible, one-stop casing solutions for customers worldwide.
+          </p>
+          
+          <!-- 互动按钮 -->
+          <div class="mt-8 flex justify-center gap-4">
+            <a href="#contact" class="px-6 py-2.5 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs rounded transition uppercase tracking-wider shadow-sm">Read More</a>
+            <a href="#contact" class="px-6 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded transition uppercase tracking-wider shadow-sm">Contact Us</a>
+          </div>
+        </div>
+
+        <!-- 下半部分：一体化数字面板 -->
+        <div class="bg-slate-100/60 px-6 py-8 grid grid-cols-2 md:grid-cols-5 gap-6 border-t border-slate-200/60">
+          <!-- 💡 数字 1：现代工厂（突显生产基地规模） -->
+          <div class="space-y-1">
+            <div class="text-3xl font-black text-slate-800">2</div>
+            <div class="text-[10px] md:text-[11px] text-slate-500 uppercase font-bold tracking-wider">Modern Factories</div>
+          </div>
+          
+          <!-- 💡 数字 2：外销经验（15年以上，突出行业资深背景） -->
+          <div class="space-y-1">
+            <div class="text-3xl font-black text-slate-800">15<span class="text-orange-500 text-sm font-bold ml-0.5">+</span></div>
+            <div class="text-[10px] md:text-[11px] text-slate-500 uppercase font-bold tracking-wider">Years Export Experience</div>
+          </div>
+          
+          <!-- 💡 数字 3：精准对齐肠衣行业（服务超过100家食品加工厂，替代原设备网站的Projects） -->
+          <div class="space-y-1">
+            <div class="text-3xl font-black text-slate-800">100<span class="text-orange-500 text-sm font-bold ml-0.5">+</span></div>
+            <div class="text-[10px] md:text-[11px] text-slate-500 uppercase font-bold tracking-wider">Food Processors Served</div>
+          </div>
+          
+          <!-- 💡 数字 4：严格品控（食品安全行业的黄金卖点） -->
+          <div class="space-y-1">
+            <div class="text-3xl font-black text-slate-800">100<span class="text-orange-500 text-sm font-bold ml-0.5">%</span></div>
+            <div class="text-[10px] md:text-[11px] text-slate-500 uppercase font-bold tracking-wider">Strict Inspection</div>
+          </div>
+          
+          <!-- 💡 数字 5：一站式供应（完美契合多种肠衣全品类优势） -->
+          <div class="space-y-1">
+            <div class="text-2xl font-black text-slate-800 uppercase tracking-tight">One-Stop</div>
+            <div class="text-[10px] md:text-[11px] text-slate-500 uppercase font-bold tracking-wider">Supply Solution</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. PRODUCTS (产品区)
+       ========================================== -->
+  <!-- 💡 统一调整：由 py-5 校准为 pt-6 pb-16 （通过把 pt-12 降低为 pt-6 解决距离上部太远的问题） -->
+  <section class="pt-6 pb-16 bg-white" id="products">
+    <div class="container mx-auto px-4 text-center">
+      <!-- 标题在干净的大白底上 -->
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide uppercase">Products</h2>
+      <!-- 💡 统一调整：下边距由 mb-12 缩减为 mb-6 -->
+      <div class="w-16 h-1 bg-orange-500 mx-auto mt-4 mb-6 rounded-full"></div>
+
+      <!-- 内容区：限制宽度 (max-w-5xl) 的底纹大外壳 -->
+      <div class="max-w-5xl mx-auto bg-slate-50 border border-slate-100 rounded-2xl p-6 space-y-6 shadow-sm">
+        <!-- 组 1：左字右图 -->
+        <div class="bg-white rounded-xl border border-slate-200/60 overflow-hidden grid md:grid-cols-2 shadow-sm">
+          <div class="p-8 md:p-12 flex flex-col justify-center text-left">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4 relative pb-2 after:absolute after:bottom-0 after:left-0 after:w-12 after:h-[2px] after:bg-orange-500">
+              Cellulose Casing
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed text-justify">
+              Uniform thickness, high strength, good elasticity, good abrasion resistance, no static electricity, suitable for high speed automatic filling requirements. Cellulose molecules have high permeability to water, air, and smoke, improving the sausage flavor and color.
+            </p>
+          </div>
+          <div class="h-64 md:h-auto">
+            <img src="/images/products/cellulose.jpg" alt="Cellulose Casing" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- 组 2：左图右字 -->
+        <div class="bg-white rounded-xl border border-slate-200/60 overflow-hidden grid md:grid-cols-2 shadow-sm">
+          <div class="h-64 md:h-auto md:order-first">
+            <img src="/images/products/collagen.jpg" alt="Collagen Casing" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-8 md:p-12 flex flex-col justify-center text-left">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4 relative pb-2 after:absolute after:bottom-0 after:left-0 after:w-12 after:h-[2px] after:bg-orange-500">
+              Collagen Casing
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed text-justify">
+              Our collagen casings are made from high quality cattle skin collagen fibers with machines imported from USA, Germany and Japan. Providing stable caliber management, crunchy bite texture, and optimum smoke permeability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. ADVANTAGE SECTION (优势区)
+       ========================================== -->
+  <!-- 💡 统一调整：由 py-5 校准为 pt-6 pb-16 （通过把 pt-12 降低为 pt-6 解决距离上部太远的问题） -->
+  <section class="pt-6 pb-16 bg-white" id="advantage">
+    <div class="container mx-auto px-4 text-center">
+      <!-- 标题在干净的大白底上 -->
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide uppercase">Advantage</h2>
+      <!-- 💡 统一调整：下边距由 mb-12 缩减为 mb-6 -->
+      <div class="w-16 h-1 bg-orange-500 mx-auto mt-4 mb-6 rounded-full"></div>
+
+      <!-- 内容区：限制宽度 (max-w-6xl) 的底纹外壳 -->
+      <div class="max-w-6xl mx-auto bg-slate-50 border border-slate-100 rounded-2xl p-6 shadow-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
+          <!-- 优势卡片 1 -->
+          <div class="relative h-80 group cursor-pointer border-r border-b border-slate-100 last:border-0">
+            <img src="/images/adv/adv1.png" alt="Rich Experience" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-orange-500/95 transition-all duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <h3 class="text-xs font-bold uppercase tracking-wider">Rich Experience</h3>
+            </div>
+          </div>
+
+          <!-- 优势卡片 2 -->
+          <div class="relative h-80 group cursor-pointer border-r border-b border-slate-100">
+            <img src="/images/adv/adv2.png" alt="Technology Support" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-orange-500/95 transition-all duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <h3 class="text-xs font-bold uppercase tracking-wider">Technology Support</h3>
+            </div>
+          </div>
+
+          <!-- 优势卡片 3 -->
+          <div class="relative h-80 group cursor-pointer border-r border-b border-slate-100">
+            <img src="/images/adv/adv3.jpg" alt="Professional Team" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-orange-500/95 transition-all duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <h3 class="text-xs font-bold uppercase tracking-wider">Professional Team</h3>
+            </div>
+          </div>
+
+          <!-- 优势卡片 4 -->
+          <div class="relative h-80 group cursor-pointer border-r border-b border-slate-100">
+            <img src="/images/adv/adv4.jpg" alt="Professional Team" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-orange-500/95 transition-all duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <h3 class="text-xs font-bold uppercase tracking-wider">Professional Team</h3>
+            </div>
+          </div>
+
+          <!-- 优势卡片 5 -->
+          <div class="relative h-80 group cursor-pointer">
+            <img src="/images/adv/adv5.jpg" alt="Quality Control" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-orange-500/95 transition-all duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <h3 class="text-xs font-bold uppercase tracking-wider">Quality Control</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. PRODUCTS APPLICATIONS (应用区)
+       ========================================== -->
+  <!-- 💡 统一调整：由 py-5 校准为 pt-6 pb-16 （通过把 pt-12 降低为 pt-6 解决距离上部太远的问题） -->
+  <section class="pt-6 pb-16 bg-white" id="applications">
+    <div class="container mx-auto px-4 text-center">
+      <!-- 标题在干净的大白底上 -->
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide uppercase">Products Applications</h2>
+      <!-- 💡 统一调整：下边距由 mb-12 缩减为 mb-6 -->
+      <div class="w-16 h-1 bg-orange-500 mx-auto mt-4 mb-6 rounded-full"></div>
+
+      <!-- 内容区：跑马灯同样收纳进限宽 (max-w-6xl)、带底纹的圆角独立舱内 -->
+      <div class="max-w-6xl mx-auto bg-slate-50 border border-slate-100 rounded-2xl p-4 overflow-hidden shadow-sm">
+        <div class="w-full flex overflow-x-hidden bg-white py-2 rounded-xl border border-slate-200/60">
+          <div class="flex gap-4 animate-marquee whitespace-nowrap">
+            <img src="/images/app/app1.jpg" alt="App 1" class="h-44 w-64 object-cover rounded-lg" />
+            <img src="/images/app/app2.jpg" alt="App 2" class="h-44 w-64 object-cover rounded-lg" />
+            <img src="/images/app/app3.jpg" alt="App 3" class="h-44 w-64 object-cover rounded-lg" />
+            <img src="/images/app/app4.jpg" alt="App 4" class="h-44 w-64 object-cover rounded-lg" />
+            
+            <!-- 镜像复制组 -->
+            <img src="/images/app/app1.jpg" alt="App 1" class="h-44 w-64 object-cover rounded-lg" />
+            <img src="/images/app/app2.jpg" alt="App 2" class="h-44 w-64 object-cover rounded-lg" />
+            <img src="/images/app/app3.jpg" alt="App 3" class="h-44 w-64 object-cover rounded-lg" />
+            <img src="/images/app/app4.jpg" alt="App 4" class="h-44 w-64 object-cover rounded-lg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper 脚本驱动 -->
+  <script>
+    import Swiper from "swiper";
+    import "swiper/css";
+    import "swiper/css/pagination";
+    import "swiper/css/effect-fade";
+    import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+
+    document.addEventListener("astro:page-load", () => {
+      if (document.querySelector(".hero-swiper")) {
+        new Swiper(".hero-swiper", {
+          modules: [Pagination, Autoplay, EffectFade],
+          effect: "fade",
+          fadeEffect: {
+            crossWithCrossFade: true
+          },
+          autoplay: { 
+            delay: 3500,
+            disableOnInteraction: false 
+          },
+          speed: 1000,
+          pagination: { el: ".swiper-pagination", clickable: true },
+          loop: true,
+        });
+      }
+    });
+  </script>
+
+  <!-- 跑马灯平滑向左挪动动画样式 -->
+  <style is:global>
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 20s linear infinite;
+    }
+  </style>

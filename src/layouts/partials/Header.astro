@@ -1,45 +1,66 @@
----
-// 如果有模版自带的配置，可以保留在上方
----
 <header class="w-full bg-white border-b border-slate-100 sticky top-0 z-50">
   <div class="container mx-auto px-4 h-24 flex items-center justify-between">
     
-    <!-- 左边：Logo图片与文字组合 (完全对应截图) -->
     <a href="/" class="flex items-center gap-3">
-      <img src="/images/logo_haitu.png" alt="IFINE CASING" class="h-14 w-auto object-contain" />
+      <img src="/images/logo_haitu.png" alt="HAITU CASING" class="h-14 w-auto object-contain" />
       <div class="border-l border-slate-300 pl-3">
         <div class="text-lg font-black tracking-wider text-slate-900 uppercase">HAITU CASING</div>
         <div class="text-[10px] text-slate-400 italic font-medium -mt-1">One-stop supply of sausage casing from China</div>
       </div>
     </a>
 
-    <!-- 右边：二级目录菜单 (带竖线分隔) -->
-    <nav class="hidden md:flex items-center text-sm font-medium text-slate-600">
-      <a href="/" class="hover:text-orange-500 transition px-3">Home</a>
-      <span class="text-slate-300 text-xs">|</span>
+    <nav class="hidden md:flex items-center text-sm font-semibold text-slate-600 h-full">
+      <a href="/" class="hover:text-orange-500 transition px-2 py-2">Home</a>
       
-      <a href="#about" class="hover:text-orange-500 transition px-3">About Us</a>
-      <span class="text-slate-300 text-xs">|</span>
+      <span class="text-slate-200 text-xs select-none">|</span>
       
-      <!-- Products 下拉菜单 -->
-      <div class="relative group px-3">
-        <button class="hover:text-orange-500 flex items-center gap-1 transition py-2">
-          Products <span class="text-[9px]">▼</span>
+      <div class="relative group px-2 h-full flex items-center">
+        <button class="hover:text-orange-500 flex items-center gap-1 transition py-2 bg-transparent border-none cursor-pointer font-semibold text-sm text-slate-600">
+          Applications <span class="text-[9px] text-orange-500">▼</span>
         </button>
-        <div class="absolute top-full left-0 w-48 bg-white border border-slate-100 rounded-md shadow-lg opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all p-1 space-y-0.5">
-          <a href="#products" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded">Cellulose Casing</a>
-          <a href="#products" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded">Collagen Casing</a>
-          <a href="#products" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded">Plastic Casing</a>
-          <a href="#products" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded">Fibrous Casing</a>
+        <div class="absolute top-[80%] left-0 w-56 bg-white border border-slate-100 rounded-md shadow-lg opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all p-1.5 space-y-0.5 z-50">
+          <a href="/applications/cooked-sausage" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded font-medium">Cooked Sausage</a>
+          <a href="/applications/ham" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded font-medium">Ham & Slicing Products</a>
+          <a href="/applications/bologna" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded font-medium">Bologna & Mortadella</a>
+          <a href="/applications/frankfurter" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded font-medium">Frankfurter</a>
+          <a href="/applications/hot-dog" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded font-medium">Hot Dog & Snack Sausage</a>
+          <a href="/applications/smoked-sausage" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded font-medium">Smoked & Dried Sausage</a>
         </div>
       </div>
-      <span class="text-slate-300 text-xs">|</span>
       
-      <a href="#knowledge" class="hover:text-orange-500 transition px-3">Knowledge</a>
-      <span class="text-slate-300 text-xs">|</span>
+      <span class="text-slate-200 text-xs select-none">|</span>
       
-      <a href="#contact" class="hover:text-orange-500 transition px-3">Contact</a>
+      <div class="relative group px-2 h-full flex items-center">
+        <button class="hover:text-orange-500 flex items-center gap-1 transition py-2 bg-transparent border-none cursor-pointer font-semibold text-sm text-slate-600">
+          Products <span class="text-[9px] text-orange-500">▼</span>
+        </button>
+        <div class="absolute top-[80%] left-0 w-60 bg-white border border-slate-100 rounded-md shadow-lg opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all p-1.5 space-y-0.5 z-50">
+          <a href="/products/plastic-casings" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded font-medium">Plastic Casings (High Barrier)</a>
+          <a href="/products/collagen-casings" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded font-medium">Collagen Casings (High Speed)</a>
+          <a href="/products/cellulose-casings" class="block px-4 py-2 text-xs hover:bg-slate-50 hover:text-orange-500 rounded font-medium">Cellulose Casings (High Efficiency)</a>
+        </div>
+      </div>
+      
+      <span class="text-slate-200 text-xs select-none">|</span>
+      
+      <a href="/technical-center" class="hover:text-orange-500 transition px-2 py-2">Technical Center</a>
+      
+      <span class="text-slate-200 text-xs select-none">|</span>
+      
+      <a href="#about" class="hover:text-orange-500 transition px-2 py-2">About Us</a>
     </nav>
+
+    <div class="flex items-center gap-3 flex-shrink-0">
+      <div class="hidden lg:flex items-center gap-1.5 bg-slate-50 border border-slate-200/60 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm">
+        <a href="/ru/" class="text-slate-400 hover:text-orange-500 no-underline transition tracking-wide uppercase">RU</a>
+        <span class="text-slate-300 font-normal select-none">/</span>
+        <a href="/" class="text-orange-500 no-underline tracking-wide uppercase font-black">EN</a>
+      </div>
+      
+      <a href="/contact" class="hidden md:inline-block py-2.5 px-5 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider rounded-md transition shadow-sm">
+        Get a Quote
+      </a>
+    </div>
 
   </div>
 </header>

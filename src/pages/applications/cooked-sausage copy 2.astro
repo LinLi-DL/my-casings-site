@@ -1,0 +1,120 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+
+<Base title="Cooked Sausage Casing Solutions | HAITU CASING">
+
+  <!-- ==================== HERO BANNER - 新布局 ==================== -->
+  <section class="relative h-[70vh] min-h-[520px] flex items-center bg-slate-950 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/app/cooked-sausage.jpg" alt="Cooked Sausage" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-transparent"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 text-orange-400 text-sm font-bold tracking-widest mb-4">
+          COOKED SAUSAGE SERIES
+        </div>
+        
+        <h1 class="text-5xl md:text-6xl font-black text-white leading-none tracking-tighter">
+          Cooked Sausage<br>
+          <span class="text-orange-500">Casing Solutions</span>
+        </h1>
+        
+        <p class="mt-6 text-xl text-slate-300 max-w-lg">
+          High-Barrier Polyamide (PA) Casings engineered for extended shelf life, 
+          extreme thermal stability, and zero weight loss during cooking.
+        </p>
+
+        <div class="mt-10">
+          <a href="#sample-form" 
+             class="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm uppercase tracking-widest px-10 py-4 rounded-2xl transition-all">
+            Request Evaluation Samples →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OPERATIONAL BENEFITS ==================== -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold text-orange-500 tracking-widest uppercase">Targeted Efficiency</span>
+        <h2 class="text-4xl font-black text-slate-900 mt-3">Operational Benefits</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white border border-slate-100 p-8 rounded-3xl hover:border-orange-200 transition-all group">
+          <div class="text-5xl text-orange-500 mb-4 group-hover:scale-110 transition-transform">01</div>
+          <h3 class="text-xl font-bold mb-3">Zero Weight Loss</h3>
+          <p class="text-slate-600">Multi-layer PA structure prevents moisture evaporation during smoking and boiling.</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 p-8 rounded-3xl hover:border-orange-200 transition-all group">
+          <div class="text-5xl text-orange-500 mb-4 group-hover:scale-110 transition-transform">02</div>
+          <h3 class="text-xl font-bold mb-3">Caliber Consistency</h3>
+          <p class="text-slate-600">Strict diameter control for perfect uniformity on high-speed lines.</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 p-8 rounded-3xl hover:border-orange-200 transition-all group">
+          <div class="text-5xl text-orange-500 mb-4 group-hover:scale-110 transition-transform">03</div>
+          <h3 class="text-xl font-bold mb-3">Extended Shelf Life</h3>
+          <p class="text-slate-600">Superior oxygen barrier to maintain freshness and flavor.</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 p-8 rounded-3xl hover:border-orange-200 transition-all group">
+          <div class="text-5xl text-orange-500 mb-4 group-hover:scale-110 transition-transform">04</div>
+          <h3 class="text-xl font-bold mb-3">High Strength</h3>
+          <p class="text-slate-600">Withstands high pressure clipping and stuffing without rupture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TECHNICAL DATASHEET + IMAGE ==================== -->
+  <section class="py-20 bg-slate-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <h2 class="text-3xl font-black text-slate-900 mb-8">Technical Datasheet</h2>
+          <div class="bg-white rounded-3xl p-8 shadow-sm">
+            <table class="w-full text-sm">
+              <tbody class="divide-y">
+                <tr><td class="py-4 font-semibold pr-8">Material Base</td><td>Polyamide (PA/PE Multi-layer Co-extrusion)</td></tr>
+                <tr><td class="py-4 font-semibold pr-8">Caliber Range</td><td>40mm – 200mm</td></tr>
+                <tr><td class="py-4 font-semibold pr-8">Printing Capability</td><td>Up to 8 Colors</td></tr>
+                <tr><td class="py-4 font-semibold pr-8">Max Temperature</td><td>121°C</td></tr>
+                <tr><td class="py-4 font-semibold pr-8">Application</td><td>Cooked Sausage, Ham, Bologna</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="relative rounded-3xl overflow-hidden shadow-xl">
+          <img src="/images/app/cooked-sausage.jpg" alt="Cooked Sausage" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Form -->
+  <section class="py-20 bg-slate-950 text-white" id="sample-form">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+      <h2 class="text-4xl font-black mb-4">Request Evaluation Samples</h2>
+      <p class="text-slate-400 mb-10">Get pre-cleared samples tailored to your production line.</p>
+      
+      <div class="bg-slate-900 p-8 md:p-12 rounded-3xl">
+        <form class="space-y-6">
+          <!-- 你的表单内容... -->
+          <button type="submit" class="w-full py-4 bg-orange-500 hover:bg-orange-600 rounded-2xl font-bold text-sm uppercase tracking-widest">
+            Submit Sample Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Base>

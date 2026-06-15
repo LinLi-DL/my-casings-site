@@ -1,0 +1,91 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="Cooked Sausage - HAITU CASING">
+
+  <section class="relative w-full h-[400px] flex items-center bg-slate-900 overflow-hidden">
+    <div class="absolute inset-0 bg-slate-950/70 z-10"></div>
+    <img src="/images/app/cooked-sausage.jpg" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="container mx-auto px-6 relative z-20">
+      <h1 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">Cooked Sausage Casing Solutions</h1>
+      <p class="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 leading-relaxed">
+        Engineered for high-barrier performance. Our PA (Polyamide) casings guarantee zero moisture loss during cooking, eliminate case hardening, and ensure a precise, uniform caliber for every link.
+      </p>
+      <div class="flex gap-4">
+        <a href="#technical-tds" class="py-3.5 px-8 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-widest rounded transition">Download Technical TDS</a>
+        <a href="/contact" class="py-3.5 px-8 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-widest rounded border border-white/20 transition">Request Factory Samples</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      {[
+        { t: "Zero Weight Loss", d: "Optimized barrier against water and oxygen, protecting meat integrity." },
+        { t: "Thermal Stability", d: "Withstands sterilization temperatures up to 121°C." },
+        { t: "High-Speed Linking", d: "Engineered for automatic clipping and high-speed filling lines (Vemag/Handtmann)." },
+        { t: "Shelf-Life Optimization", d: "Prevents acidic spoilage, significantly extending your product’s market window." }
+      ].map(item => (
+        <div class="p-6 border border-slate-100 rounded-xl bg-slate-50 hover:shadow-lg transition">
+          <div class="text-orange-500 mb-4 text-2xl font-black">✦</div>
+          <h3 class="font-bold text-slate-900 mb-2">{item.t}</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">{item.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="py-16 bg-slate-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-black text-slate-900 uppercase mb-12 text-center">Machinery & Process Guidelines</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+          <h4 class="font-bold text-orange-500 mb-4">Equipment Compatibility</h4>
+          <p class="text-sm text-slate-600">Engineered for seamless integration with full-automatic clipping machines (Poly-clip/Alpina) and high-speed industrial twisted linking lines.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+          <h4 class="font-bold text-orange-500 mb-4">Operational Process</h4>
+          <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+            <li><strong>Pre-soak:</strong> Recommended 35°C warm water for 15-20 minutes.</li>
+            <li><strong>Cooking Limits:</strong> Continuous cooking &lt; 85°C; Sterilization up to 121°C.</li>
+            <li><strong>Cooling:</strong> Mandatory shower-cool to &lt; 25°C core temperature for optimal casing tightness.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white" id="technical-tds">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-2xl font-black text-slate-900 mb-8 uppercase">Technical Specifications</h2>
+      <div class="overflow-x-auto border border-slate-200 rounded-lg">
+        <table class="w-full text-sm text-left">
+          <tr class="bg-slate-50 border-b border-slate-200"><th class="p-4">Specification Category</th><th class="p-4">Details</th></tr>
+          <tr class="border-b border-slate-100"><td class="p-4 font-bold">Caliber</td><td class="p-4">30mm – 120mm</td></tr>
+          <tr class="border-b border-slate-100"><td class="p-4 font-bold">Structure</td><td class="p-4">5 / 7-Layer Co-extrusion</td></tr>
+          <tr class="border-b border-slate-100"><td class="p-4 font-bold">Supply Mode</td><td class="p-4">Shirred / Roll / Cut</td></tr>
+          <tr><td class="p-4 font-bold">Printability</td><td class="p-4">Up to 8-color High Definition</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-slate-900 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-xl font-bold mb-6 uppercase">Still deciding on the right specifications?</h3>
+      <p class="mb-8 text-slate-400 max-w-xl mx-auto">Share your machine brand and target sausage diameter with our technical team. We will provide a "Casing Matching Report" for your specific production line within 12 hours.</p>
+      <a href="/contact" class="inline-block py-3 px-10 bg-orange-500 text-white font-bold text-xs uppercase tracking-widest rounded hover:bg-orange-600 transition">Start My Custom Evaluation</a>
+    </div>
+  </section>
+  
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Explore Other Solutions</h4>
+      <div class="flex justify-center gap-4">
+        <a href="/products/ham" class="text-slate-900 font-bold hover:text-orange-500 transition">Ham Casings →</a>
+        <a href="/products/frankfurter" class="text-slate-900 font-bold hover:text-orange-500 transition">Frankfurter Casings →</a>
+      </div>
+    </div>
+  </section>
+</Base>

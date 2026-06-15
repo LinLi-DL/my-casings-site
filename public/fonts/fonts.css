@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Inter'; /* 请根据你实际使用的字体名修改 */
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-v20-latin-regular.woff2') format('woff2');
+}
+/* 根据下载的字重添加更多 @font-face */

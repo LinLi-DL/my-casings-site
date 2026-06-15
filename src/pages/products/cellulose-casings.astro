@@ -1,0 +1,85 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="Cellulose Casings - HAITU CASING">
+  <section class="relative w-full h-[400px] flex items-center bg-slate-900 overflow-hidden">
+    <div class="absolute inset-0 bg-slate-950/70 z-10"></div>
+    <div class="container mx-auto px-6 relative z-20">
+      <h1 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">Cellulose Casings for High-Speed Automation</h1>
+      <p class="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 leading-relaxed">
+        Precision-engineered for industrial frankfurter and sausage production. Superior strength, uniform caliber, and effortless peeling.
+      </p>
+      <div class="flex gap-4">
+        <a href="/downloads/cellulose-tds.pdf" class="py-3.5 px-8 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-widest rounded transition">Request Technical Data Sheet</a>
+        <a href="/contact" class="py-3.5 px-8 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-widest rounded border border-white/20 transition">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      {[
+        { t: "High-Speed Performance", d: "Designed for 20,000+ pieces/hour" },
+        { t: "Uniform Caliber", d: "Consistent diameter for precise weight" },
+        { t: "Smoke Permeability", d: "Optimized for deep, uniform color" },
+        { t: "Clean Peeling", d: "Specially treated for automation" }
+      ].map(item => (
+        <div class="p-6 border border-slate-100 rounded-xl bg-slate-50 hover:shadow-lg transition">
+          <div class="text-orange-500 mb-4 text-2xl font-black">✦</div>
+          <h3 class="font-bold text-slate-900 mb-2">{item.t}</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">{item.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="py-16 bg-slate-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-black text-slate-900 uppercase mb-12 text-center">Process Optimization</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+          <h4 class="font-bold text-orange-500 mb-3">01. Automation Compatibility</h4>
+          <p class="text-sm text-slate-600">Engineered for seamless integration with Handtmann and Vemag lines, minimizing downtime and断肠 (breakage) risks.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+          <h4 class="font-bold text-orange-500 mb-3">02. Smoke & Color Control</h4>
+          <p class="text-sm text-slate-600">Advanced permeability technology ensures optimal smoke penetration for consistent, high-quality color across your entire batch.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+          <h4 class="font-bold text-orange-500 mb-3">03. High-Efficiency Peeling</h4>
+          <p class="text-sm text-slate-600">Special surface treatments allow for clean, high-speed peeling, significantly reducing product waste in industrial production.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-2xl font-black text-slate-900 mb-8 uppercase">Technical Specifications</h2>
+      <div class="overflow-x-auto border border-slate-200 rounded-lg">
+        <table class="w-full text-sm text-left">
+          <tr class="bg-slate-50 border-b border-slate-200"><th class="p-4">Parameter</th><th class="p-4">Details</th></tr>
+          <tr class="border-b border-slate-100"><td class="p-4 font-bold">Caliber Range</td><td class="p-4">13mm – 40mm (customizable)</td></tr>
+          <tr class="border-b border-slate-100"><td class="p-4 font-bold">Shirring Type</td><td class="p-4">Standard / High-density</td></tr>
+          <tr class="border-b border-slate-100"><td class="p-4 font-bold">Treatment</td><td class="p-4">Standard / Easy-peel / Pre-moistened</td></tr>
+          <tr><td class="p-4 font-bold">Color</td><td class="p-4">Clear / Smoked / Custom Dyed</td></tr>
+        </table>
+      </div>
+      <div class="mt-8 text-center">
+        <a href="/downloads/cellulose-tds.pdf" class="inline-block py-3 px-10 bg-slate-900 text-white font-bold text-xs uppercase tracking-widest rounded hover:bg-orange-500 transition">Download Full Spec PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-slate-900 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-xl font-bold mb-8 uppercase">Need a different solution?</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/products/plastic-casings" class="p-6 border border-slate-700 rounded hover:border-orange-500 transition">Searching for Extended Shelf Life?</a>
+        <a href="/products/collagen-casings" class="p-6 border border-slate-700 rounded hover:border-orange-500 transition">Searching for Natural Texture?</a>
+        <a href="#" class="p-6 border border-slate-700 rounded hover:border-orange-500 transition">Need Custom Caliber/Print?</a>
+      </div>
+    </div>
+  </section>
+</Base>

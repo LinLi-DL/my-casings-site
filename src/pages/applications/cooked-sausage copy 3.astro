@@ -1,0 +1,112 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+
+<Base title="Cooked Sausage Casing Solutions | HAITU CASING">
+
+  <!-- Hero Banner -->
+  <section class="relative h-[70vh] min-h-[520px] flex items-center bg-slate-900 overflow-hidden">
+    <img src="/images/app/cooked-sausage.jpg" alt="Cooked Sausage" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-transparent"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-orange-400 text-sm font-bold tracking-widest rounded-3xl mb-6">
+          COOKED SAUSAGE SERIES
+        </div>
+        <h1 class="text-5xl md:text-6xl font-black text-white tracking-tighter leading-none">
+          Cooked Sausage<br>
+          <span class="text-orange-500">Casing Solutions</span>
+        </h1>
+        <p class="mt-6 text-xl text-slate-200 max-w-lg">
+          High-Barrier Polyamide (PA) Casings specifically engineered for extended shelf life, 
+          excellent thermal stability, and zero weight loss during cooking and sterilization.
+        </p>
+        <div class="mt-10">
+          <a href="#sample-form" class="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold px-10 py-4 rounded-2xl transition-all text-sm uppercase tracking-widest">
+            Request Evaluation Samples →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Operational Benefits -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="text-center mb-16">
+        <span class="text-xs font-bold text-orange-500 tracking-widest uppercase">Targeted Efficiency</span>
+        <h2 class="text-4xl font-black text-slate-900 mt-3">Operational Benefits</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white border border-slate-100 p-8 rounded-3xl hover:shadow-xl transition-all">
+          <div class="text-4xl text-orange-500 mb-4">01</div>
+          <h3 class="text-xl font-bold mb-3">Zero Weight Loss</h3>
+          <p class="text-slate-600">Advanced multi-layer barrier technology effectively prevents moisture evaporation during smoking, boiling and sterilization processes, maximizing product yield.</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 p-8 rounded-3xl hover:shadow-xl transition-all">
+          <div class="text-4xl text-orange-500 mb-4">02</div>
+          <h3 class="text-xl font-bold mb-3">Caliber Consistency</h3>
+          <p class="text-slate-600">Strict caliber control ensures uniform diameter throughout the entire production run, ideal for high-speed automatic clipping lines.</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 p-8 rounded-3xl hover:shadow-xl transition-all">
+          <div class="text-4xl text-orange-500 mb-4">03</div>
+          <h3 class="text-xl font-bold mb-3">Extended Shelf Life</h3>
+          <p class="text-slate-600">Superior oxygen and moisture barrier properties significantly extend product shelf life while preserving flavor and color.</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 p-8 rounded-3xl hover:shadow-xl transition-all">
+          <div class="text-4xl text-orange-500 mb-4">04</div>
+          <h3 class="text-xl font-bold mb-3">High Temperature Resistance</h3>
+          <p class="text-slate-600">Specially formulated to withstand high cooking and sterilization temperatures up to 121°C.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications -->
+  <section class="py-20 bg-slate-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-black text-slate-900">Technical Specifications</h2>
+      </div>
+      
+      <div class="max-w-4xl mx-auto bg-white rounded-3xl p-10 shadow-sm">
+        <table class="w-full text-left">
+          <tbody class="divide-y divide-slate-100 text-sm">
+            <tr><td class="py-5 font-semibold pr-12">Material Base</td><td class="py-5 text-slate-600">Polyamide (PA/PE Multi-layer Co-extrusion)</td></tr>
+            <tr><td class="py-5 font-semibold pr-12">Caliber Range</td><td class="py-5 text-slate-600">40mm – 200mm</td></tr>
+            <tr><td class="py-5 font-semibold pr-12">Printing Capability</td><td class="py-5 text-slate-600">Up to 8 colors high resolution</td></tr>
+            <tr><td class="py-5 font-semibold pr-12">Max Cooking Temperature</td><td class="py-5 text-slate-600">121°C (Sterilization Grade)</td></tr>
+            <tr><td class="py-5 font-semibold pr-12">Supply Forms</td><td class="py-5 text-slate-600">Shirred sticks, Lay-flat rolls, Cut pieces</td></tr>
+            <tr><td class="py-5 font-semibold pr-12">Recommended Applications</td><td class="py-5 text-slate-600">Cooked Sausage, Ham, Bologna, Mortadella</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Request -->
+  <section class="py-24 bg-slate-950 text-white" id="sample-form">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+      <h2 class="text-4xl font-black mb-6">Request Evaluation Samples</h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto mb-12">
+        Get pre-cleared, customized samples tailored to your specific production requirements.
+      </p>
+      
+      <div class="bg-slate-900 rounded-3xl p-10 md:p-12">
+        <form class="space-y-6">
+          <input type="hidden" name="product" value="Cooked Sausage" />
+          <!-- 你可以在这里添加更多表单字段 -->
+          <button type="submit" class="w-full py-5 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm uppercase tracking-widest rounded-2xl transition">
+            Submit Sample Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Base>
